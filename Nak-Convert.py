@@ -149,3 +149,6 @@ async def on_ready():
 
 # Lancer le bot
 bot.run(TOKEN_BOT)
+
+
+test
