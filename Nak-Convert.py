@@ -130,13 +130,22 @@ async def clean_channel(channel):
 
 async def send_menu(channel):
     embed = discord.Embed(
-        title="Menu Principal - ImageBot",
-        description="Bienvenue dans **ImageBot**, votre assistant de conversion d'images.\n\n"
-                    "Choisissez un format parmi le menu déroulant pour commencer.\n\n",
+        title="🖼️ Menu Principal - Nak-Convert",
+        description=(
+            "Bienvenue dans **Nak-Convert**, votre assistant de conversion d'images.\n\n"
+            "Voici les étapes pour convertir vos images :\n\n"
+            "1️⃣ **Sélectionnez** le format dans lequel vous souhaitez convertir l'image.\n"
+            "2️⃣ **Envoyez** l'image à convertir.\n"
+            "3️⃣ Le bot **convertira** l'image et vous l'enverra dans le format choisi.\n"
+            "4️⃣ Une fois l'image reçue, faites un **clic droit** dessus et sélectionnez :\n"
+            "   **'Enregistrer l'image sous'** pour la télécharger.\n\n"
+            "🔄 **Utilisez** le bouton '🧹 Nettoyer le channel' pour supprimer les messages et recommencer."
+        ),
         color=discord.Color.blue()
     )
-    embed.set_footer(text="ImageBot | Par Nakwi")
+    embed.set_footer(text="Nak-Convert | Par Nakwi")
     await channel.send(embed=embed, view=FormatSelectionMenu())
+
 
 
 @bot.event
